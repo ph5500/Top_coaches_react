@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Ul = styled.ul`
+const Ul = styled.div`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
-
   li {
     padding: 18px 10px;
   }
@@ -31,11 +30,20 @@ const Ul = styled.ul`
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
-      <li>Home</li>
-      <li>About Us</li>
-      <li>Contact Us</li>
-      <li>Sign In</li>
-      <li>Sign Up</li>
+      <li>
+        {' '}
+        <a href='/home'>Home</a>
+      </li>
+      <li>
+        <a href='/videos'>Videos</a>
+      </li>
+      <li>
+        <a href='/Blog'>Blog</a>
+      </li>
+      <a href='/Tactics'>Tactics</a>
+      <li>
+        <a href='/Signup'>Signup</a>
+      </li>
     </Ul>
   )
 }
